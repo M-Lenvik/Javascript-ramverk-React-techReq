@@ -8,19 +8,26 @@ import { latestAdsLoader } from './loaders/latestAdsLoader';
 import { adsLoader } from './loaders/adsLoader';
 import { adLoader } from './loaders/adLoader';
 
-export const router = createBrowserRouter([
+const basename = import.meta.env.PROD ? '/Javascript-ramverk-React-techReq' : '/';
+
+export const router = createBrowserRouter(
+  [
+    {
+      path: '/',
+      element: <Layout />,
+      errorElement: <Error />,
+      children: [
+        {
+          path: '/',
+          loader: latestAdsLoader,
+          element: <Home />,
+        },
+        { path: '/ads', loader: adsLoader, element: <Ads /> },
+        { path: '/ads/:id', loader: adLoader, element: <AdDetails /> },
+      ],
+    },
+  ],
   {
-    path: '/',
-    element: <Layout />,
-    errorElement: <Error />,
-    children: [
-      {
-        path: '/',
-        loader: latestAdsLoader,
-        element: <Home />,
-      },
-      { path: '/ads', loader: adsLoader, element: <Ads /> },
-      { path: '/ads/:id', loader: adLoader, element: <AdDetails /> },
-    ],
-  },
-]);
+    basename,
+  }
+);
