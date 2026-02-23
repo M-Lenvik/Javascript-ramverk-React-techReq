@@ -23,6 +23,7 @@ Detta är en kursuppgift i React - en webbaserad jobbsökningsapplikation som an
    2. [Funktionalitet](#funktionalitet)
    3. [Arkitektur](#arkitektur)
 6. [Betygskriterier](#betygskriterier)
+   1. [Slutbetyg](#-slutbetyg)
 
 ## 🔍 Beskrivning av projektet 📚 Tech Recruitments
 
@@ -285,6 +286,12 @@ Layout innehåller:
 - ✅ **Styled Components:** Styled components används för tematisering av designsystemet
 - ✅ **Grafisk presentation:** Grafisk visualisering med Recharts (stapeldiagram över jobb per kommun)
 - ✅ **Custom hooks:** Custom hooks implementerade (`useAdContext`, `useMediaQuery`)
+
+### 🏆 Slutbetyg
+**Betyg: Godkänt**
+<br>
+<img width="515" height="296" alt="betyg-case-af-jobtech" src="https://github.com/user-attachments/assets/af6bad49-c779-4703-b2f3-a9c7d0e3353d" />
+
 
 ## Deployment
 
